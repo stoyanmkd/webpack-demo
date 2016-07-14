@@ -22,9 +22,9 @@ const common = {
     },
     output: {
         path: PATHS.build,
-        publicPath: '/webpack-demo/',
-        filename: '[name].[chunkhash].js',
-        chunkFilename: '[chunkhash].js'
+        //publicPath: '/webpack-demo/',
+        filename: '[name].[hash].js',
+        chunkFilename: '[hash].js'
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -44,10 +44,10 @@ switch(process.env.npm_lifecycle_event) {
                 devtool: 'source-map',
                 output: {
                     path: PATHS.build,
-                    filename: '[name].[chunkhash].js',
+                    filename: '[name].[hash].js',
                     // This is used for require.ensure. The setup
                     // will work without but this is useful to set.
-                    chunkFilename: '[chunkhash].js'
+                    chunkFilename: '[hash].js'
                 }
             },
             parts.clean(PATHS.build),
