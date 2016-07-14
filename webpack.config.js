@@ -66,7 +66,7 @@ switch(process.env.npm_lifecycle_event) {
     default:
         config = merge(
             common,
-            parts.setupCSS(PATHS.style),
+            parts.extractCSS(PATHS.style),
             parts.devServer({
                 // Customize host/port here if needed
                 host: process.env.HOST,
