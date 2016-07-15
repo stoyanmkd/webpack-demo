@@ -1,4 +1,17 @@
+@font-face {
+    font-family: robotoMedium;
+    src: url("../assets/font/Roboto-Medium.ttf");
+}
+
+body {
+    background-color: #aad1dd;
+}
+
 h1,h2 {
-    font-family: monospace;
+    font-family: robotoMedium;
     color: darkslategray;
+}
+
+div {
+    background-image: url("../assets/svg/arrow.svg");
 }

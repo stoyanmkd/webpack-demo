@@ -30,7 +30,37 @@ const common = {
         new HtmlWebpackPlugin({
             title: 'Webpack demo'
         })
-    ]
+    ],
+    module: {
+        loaders: [
+
+            // ES6, React
+            //{
+            //    test: /\.jsx?$/,
+            //    exclude: /(node_modules|bower_components)/,
+            //    loader: 'babel', // 'babel-loader' is also a legal name to reference
+            //    query: {
+            //        presets: ['react', 'es2015']
+            //    }
+            //},
+            // SVG
+            {
+                test: /\.svg$/,
+                loader: 'file-loader',
+                include: PATHS.images
+            },
+            // FONT
+            {
+                test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+                loader: 'file-loader'
+            }
+            //{
+            //    test: /\.css$/,
+            //    loaders: ['style', 'css'],
+            //    include: PATHS.style
+            //}
+        ]
+    }
 };
 
 var config;
